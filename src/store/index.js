@@ -37,8 +37,8 @@ export default new Vuex.Store({
       return res.data
     },
 
-    async searchUserRecord({}, {userName}){
-      const res = await axios.get(`http://ec2-54-180-32-236.ap-northeast-2.compute.amazonaws.com:3000/record/${userName}`)
+    async searchUserRecord({}, {userName, matchType}){
+      const res = await axios.get(`http://ec2-54-180-32-236.ap-northeast-2.compute.amazonaws.com:3000/record/${userName}/${matchType}`)
       return res.data
     }
 
